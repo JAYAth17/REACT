@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+Welcome
+
+<div id="demo"></div>
+
+<script>
+    // Local Storage
+    localStorage.setItem("name", "jayanth");
+    localStorage.setItem("place", "chennai");
+
+    console.log(localStorage.getItem("name"));
+
+    document.getElementById("demo").innerHTML =
+        localStorage.getItem("name");
+
+    // Session Storage
+    sessionStorage.setItem("age", "23");
+    sessionStorage.setItem("course", "fullstack");
+
+    console.log(sessionStorage.getItem("course"));
+</script>
+
+</body>
+</html>

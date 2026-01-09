@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .myClass {
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="one">Welcome </h1>
+
+    <div id="show"></div>
+
+    <button id="btn">Click</button>
+
+    <div id="success"></div>
+
+    <script>
+
+        console.log(document.title);
+
+    
+        let one = document.getElementById('one');
+        console.log(one.textContent);   // only text
+
+        // 3. Modify text content
+        one.textContent += " Hi there!";
+
+        // 4. Access div and insert HTML
+        let show = document.getElementById('show');
+        show.innerHTML = "<p> welcome</p>";
+
+        // 5. Add class name
+        show.className = "myClass";
+
+        // 6. Change styles using DOM
+        show.style.color = "red";
+        show.style.backgroundColor = "black";
+
+        // 7. Button click event
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click', (event) => {
+            console.log("Button clicked!");
+            btn.textContent = "messi";
+
+            let success = document.getElementById('success');
+            success.textContent = "vamos!";
+        });
+
+        // 8. Keyboard event
+        document.addEventListener('keydown', (event) => {
+            show.textContent = event.key;
+        });
+    </script>
+
+</body>
+</html>

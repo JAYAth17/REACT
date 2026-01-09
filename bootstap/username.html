@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+
+    <h2>User Login</h2>
+
+    <label>Username:</label><br>
+    <input type="text" id="username"><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password"><br><br>
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+    <script>
+        function login() {
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+            let message = document.getElementById('message');
+
+            if(username === "admin" && password === "12") {
+                message.style.color = "green";
+                message.textContent = "Login successful!";
+                window.location.href = "https://www.netflix.com/watch/70236046?trackId=1417028";
+            } else {
+                message.style.color = "red";
+                message.textContent = "Invalid username or password.";
+            }
+        }
+
+    </script>
+    <script>
+         let a = 1
+        console.log (a);
+    </script>
